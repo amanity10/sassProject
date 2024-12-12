@@ -1,0 +1,240 @@
+@use "../abstracts/variables";
+@use "../base/fonts";
+
+// Начало Расалина Блок 3 easy steps 
+
+.steps-wraper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.steps__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //justify-content: space-evenly;
+  background-image: url('../img/back.png');
+  background-size: cover;
+  border-radius: 80px;
+  width: 100%;
+  //max-width: 1216px;
+  //max-height: 460px;
+  position: relative;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -0.96px;
+  text-transform: uppercase;
+  text-align: start;
+  margin-bottom: 50px;
+
+}
+
+.steps-title {
+  display: flex;
+  align-items: center;
+  max-width: 512px;
+  font-family: variables.$font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: rgb(20, 20, 20);
+}
+
+.step-text {
+  display: flex;
+  flex-direction: row;
+  max-width: 390px;
+  gap: 14px;
+  margin-bottom: 25px;
+  text-transform: none;
+  font-family: variables.$font-family;
+  font-size: 14px;
+  align-items: center;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+}
+
+.text-2 {
+  max-width: 220px;
+  height: 36px;
+}
+
+.text-3 {
+  max-width: 350px;
+  height: 36px;
+}
+
+.steps-img {
+  max-width: 420px;
+  max-height: 420px;
+}
+
+// скидки
+.discount-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  //max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  margin-top: 50px
+}
+
+.discount-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  height: 130px;
+  transform-origin: center;
+  text-align: center;
+  padding: 0 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.discount-wrapper {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  height: 130px;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.text-discount {
+  width: 100%;
+  padding-left: 30px;
+  // margin-left: -120px;
+  font-family: variables.$font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  color: rgb(249, 247, 244);
+}
+
+.steps-italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.discount-orange {
+
+  background: rgb(252, 138, 17);
+  transform: rotate(3deg);
+  top: 1660px;
+
+}
+
+.discount-green {
+  position: relative;
+  top: 1660px;
+  transform: rotate(-2deg);
+  background: rgb(161, 196, 135);
+}
+
+
+@media screen and (max-width: 1024px) {
+  .steps__block {
+    max-width: 704px;
+    max-height: 488px;
+    margin-top: 100px;
+    border-radius: 80px;
+  }
+
+  .steps-title {
+    max-width: 294px;
+    max-height: 96px;
+    margin-top: 0px;
+
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .step-text {
+    max-width: 240px;
+    max-height: 54px;
+  }
+
+  .text_3 {
+    max-width: 250px;
+    margin-top: 32px;
+  }
+}
+
+
+@media screen and (max-width: 760px) {
+
+  .steps-wraper {
+    margin-top: 60px;
+  }
+
+  .steps__block {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    max-width: 335px;
+    max-height: 661px;
+    margin: auto;
+    background-image: url('../img/blocks-mobile.png');
+    background-size: cover;
+    border-radius: 40px;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.20);
+  }
+
+  .steps-img {
+    max-width: 258px;
+    max-height: 319px;
+  }
+
+  .steps-title {
+    max-width: 295px;
+    max-height: 56px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .step-text {
+    max-width: 230px;
+    max-height: 54px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+  }
+
+  .discount-container {
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .discount-section {
+    height: 100px;
+    max-width: 100%;
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  .text-discount {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,178 @@
+@use "../abstracts/variables";
+@use "../base/fonts";
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #e0e0e0;
+    font-family: variables.$font-family;
+
+    &__nav {
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: variables.$primary-color;
+                font-size: 1rem;
+
+                &:hover {
+                    color: variables.$accent-color;
+                }
+            }
+        }
+
+        .header__menu {
+            display: flex;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        &-icon {
+            width: 1rem;
+            height: 1rem;
+            background-image: url('../img/logo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &-text {
+            font-size: 1rem;
+            font-weight: bold;
+            color: variables.$primary-color;
+            font-family: variables.$font-family;
+        }
+    }
+
+    .header__burger {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .header__cart {
+        font-size: 1.25rem;
+        color: rgb(51, 51, 51);
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(173, 255, 47);
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .header {
+        padding: 2rem 4rem;
+
+        &__logo {
+            &-text {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__nav ul {
+            li {
+                margin-right: 1.5rem;
+            }
+
+            a {
+                font-size: 1.125rem;
+            }
+        }
+
+        .header__cart {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 1rem 1.5rem;
+        width: 100vw;
+        height: auto;
+
+        &__logo {
+            &-text {
+                font-size: 0.875rem;
+            }
+        }
+
+        &__nav ul {
+            li {
+                margin-right: 0.75rem;
+            }
+
+            a {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .header {
+        padding: 1rem;
+        padding-left: 1rem;
+        width: 100%;
+        height: auto;
+
+        &__logo {
+            &-text {
+                font-size: 0.75rem;
+            }
+        }
+
+        .header__menu {
+            display: none;
+        }
+
+        .header__cart {
+            display: none !important;
+        }
+
+        .header__burger {
+            display: block;
+        }
+
+        &__nav ul {
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
